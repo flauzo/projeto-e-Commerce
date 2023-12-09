@@ -18,4 +18,4 @@ Neste projeto, desenvolvi as seguintes habilidades:
 
 Entender o que são Métodos Ágeis
 Trabalhar em equipes utilizando a comunicação de forma eficaz
-Praticar todas as habilidades desenvolvidas até o momento de Back-end
+Praticar todas as habilidades desenvolvidas até o momento de Back-end.
