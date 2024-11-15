@@ -11,6 +11,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -93,5 +94,5 @@ public class Pedido {
   public void setData_elaboracao(Data data_elaboracao) {
     this.data_elaboracao = data_elaboracao;
   }
-
 }
+
