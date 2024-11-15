@@ -1,5 +1,6 @@
+-- Oracle database - scripts 'PL/SQL'.
 
--- Cria a tabela Usuario
+-- Cria a tabela Usuário.
 CREATE TABLE tb_usuario(
 ID INTEGER PRIMARY KEY, 
 NOME VARCHAR(255) NOT NULL,
@@ -9,14 +10,13 @@ CONSTRAINT UQ_EMAIL_USUARIO UNIQUE (NOME)
    
 );
 
--- Inserindo dados na tabela Usuario
+-- Inserindo Dados na tabela Usuário.
 INSERT INTO tb_usuario (ID, NOME, EMAIL, SENHA) VALUES (1,'João Silva', 'joaosilva@teste.com.br', 'silva1289');
 INSERT INTO tb_usuario (ID, NOME, EMAIL, SENHA) VALUES (2,'Maria Silva', 'silvamaria@teste.com.br', 'smaria4569');
 INSERT INTO tb_usuario (ID, NOME, EMAIL, SENHA) VALUES (3,'Claudia Souza', 'claudiasouza@teste.com.br', 'csouza5487');
 INSERT INTO tb_usuario (ID, NOME, EMAIL, SENHA) VALUES (4,'Jurema Andrade', 'juremaandrade@teste.com.br', 'andradej5679');
 
-
--- Cria a tabela Categoria
+-- Cria a tabela Categoria.
 CREATE TABLE tb_categorias(
 ID INTEGER PRIMARY KEY,
 TIPO VARCHAR(255) NOT NULL,
@@ -24,14 +24,13 @@ CONSTRAINT UQ_NOME_CATEGORIA UNIQUE (TIPO)
 
 );
 
--- Insere os dados na tabela categoria
+-- Insere os Dados na tabela categoria.
 INSERT INTO tb_categorias (ID, TIPO) VALUES (1, 'BEBIDA ALCOOLICA');
 INSERT INTO tb_categorias (ID, TIPO) VALUES (2, 'BEBIDA NÃO ALCOOLICA');
 INSERT INTO tb_categorias (ID, TIPO) VALUES (3, 'SNACKS');
 INSERT INTO tb_categorias (ID, TIPO) VALUES (4, 'DIVERSOS');
 
---Cria a tabela Pedidos
-
+--Cria a tabela Pedidos.
 CREATE TABLE tb_pedidos(
 ID INTEGER PRIMARY KEY,
 ID_USUARIO int NOT NULL,
@@ -42,7 +41,7 @@ DATA_ELABORACAO DATE,
 FOREIGN KEY (ID_USUARIO) REFERENCES tb_usuario(ID)
 );
 
--- Insere os dados na tabela Pedidos
+-- Insere os Dados na tabela Pedidos.
 INSERT INTO tb_pedidos (ID, ID_USUARIO, ENDERECO, QUANTIDADE, PRECO_TOTAL, DATA_ELABORACAO) 
 VALUES (301, 1,'RUA DOZE 567',10, 56,'22-03-2020');
 
@@ -55,8 +54,7 @@ VALUES (303, 3, 'RUA SETEMBRO 482', 5, 17.50,'04-03-2022');
 INSERT INTO tb_pedidos (ID, ID_USUARIO, ENDERECO, QUANTIDADE, PRECO_TOTAL, DATA_ELABORACAO) 
 VALUES (304, 4, 'RUA OLIVEIRA 36', 2, 40,'06-10-1999');
 
---Cria a tabela Produtos
-
+--Cria a tabela Produtos.
 CREATE TABLE tb_produtos(
 ID NUMBER(4) PRIMARY KEY,
 ID_PEDIDO NUMBER(4),
@@ -68,7 +66,7 @@ FOREIGN KEY (ID_CATEGORIA) REFERENCES tb_categorias(ID),
 CONSTRAINT UQ_NOME_PRODUTO UNIQUE (NOME)
 );
 
--- Insere os dados na tabela Produtos
+-- Insere os Dados na tabela Produtos.
 INSERT INTO tb_produtos (ID, ID_PEDIDO, ID_CATEGORIA, NOME, PRECO) VALUES (1, 301, 01, 'CERVEJA BRAHMA', 5.60);
 INSERT INTO tb_produtos (ID, ID_PEDIDO, ID_CATEGORIA, NOME, PRECO) VALUES (2, 302, 02, 'SUCO', 4.20);
 INSERT INTO tb_produtos (ID, ID_PEDIDO, ID_CATEGORIA, NOME, PRECO) VALUES (3, 303, 03, 'SALGADINHO', 3.50);
