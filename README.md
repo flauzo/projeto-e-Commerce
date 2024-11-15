@@ -12,9 +12,13 @@ Como seu antigo sistema(_legado_), que era um conjunto de planilhas, já não at
 **⚙️_Técnologias usadas_**
 _Back-end_:
 Desenvolvido usando: -**JAVA**, 
+
                      -**SPRING BOOT**, 
+                     
                      -**HIBERNATE**, 
+                     
                      -**SQL**, e 
+                     
                      -**METODOLOGIAS ÁGEIS**;
 
 **👨🏻‍🏫_Habilidades Desenvolvidas_**
