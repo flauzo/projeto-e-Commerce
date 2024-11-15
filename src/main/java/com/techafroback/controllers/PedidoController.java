@@ -2,8 +2,10 @@ package com.techafroback.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
 import com.techafroback.model.Pedido;
 import com.techafroback.repositories.PedidoRepository;
+
 import java.util.List;
 import java.util.Optional;
 
@@ -46,9 +48,9 @@ public class PedidoController {
         }
     }
     
-
     @DeleteMapping("/{id}")
     public void delete(@PathVariable int id) {
         repository.deleteById(id);
     }
 }
+
